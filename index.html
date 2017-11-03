@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=360, initial-scale=1">
+	<title>testTask</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/date.js"></script>
+	<script src="js/newCom.js"></script>
+	<script	src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+	<div class="main-wrapper">
+		<div class="user-info">
+			<div class="user">
+				<div class="user__photo-wrapper">
+					<img src="img/user-photo.png" alt="user photo" class="user__photo">
+				</div>
+				
+				<div class="user__description">
+					<span class="user__name">Вероника Ростова</span>
+
+					<span class="user__position">Менеджер по продажам</span>
+
+					<p class="user__status">Подберу для вас самые лучшие предложения. Мои услуги абсолютно бесплатны</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="services-wrapper">
+			<div class="services">
+				<div class="services__header">
+					<div class="services__header-cell"></div>
+					<div class="services__header-cell">
+						<span>Услуги</span>
+					</div>
+				</div>
+
+				<div class="services__row">
+					<div class="services__cell services__cell--first">
+						<span>Ручное бронирование</span>
+						<div class="services__graph"></div>
+					</div>
+					<div class="services__cell">
+						<span>11</span>
+					</div>
+				</div>
+
+				<div class="services__row">
+					<div class="services__cell services__cell--second">
+						<span>Пакетные туры</span>
+						<div class="services__graph"></div>
+					</div>
+					<div class="services__cell">
+						<span>3</span>
+					</div>
+				</div>
+
+				<div class="services__row">
+					<div class="services__cell services__cell--third">
+						<span>Отели</span>
+						<div class="services__graph"></div>
+					</div>
+					<div class="services__cell">
+						<span>1</span>
+					</div>
+				</div>
+
+				<div class="services__total">
+					<div class="services__total-cell">
+						<span>Всего</span>
+					</div>
+					<div class="services__total-cell">
+						<span>15</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="reviews">
+			<div class="reviews-header">
+				<div class="reviews-header__switchers">
+					<a href="#" class="reviews-header__switcher reviews-header__switcher--unactive">Последние отзывы</a>
+					<a href="#" class="reviews-header__switcher">Все отзывы</a>
+				</div>
+
+				<div class="reviews-header__info">
+					<div class="reviews-header__icon reviews-header__icon--likes">
+						<span>131</span>
+					</div>
+					<div class="reviews-header__icon reviews-header__icon--comments">
+						<span>14</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="review">
+				<div class="review__author-date">
+					<span class="review__author-name">Самуил</span>
+					<span class="review__date">13 октября 2011</span>
+				</div>
+
+				<div class="review__text-wrapper">
+					<p class="review__text">Привет, Верунь! ниче себе ты крутая. фотка класс!!!!</p>
+				</div>
+			</div>
+
+			<div class="review">
+				<div class="review__author-date">
+					<span class="review__author-name">Лилия Семёновна </span>
+					<span class="review__date">14 октября 2011</span>
+				</div>
+
+				<div class="review__text-wrapper">
+					<p class="review__text">Вероника, здравствуйте! Есть такой вопрос: Особый вид куниц жизненно стабилизирует кинетический момент, это и есть всемирно известный центр огранки алмазов и торговли бриллиантами?</p>
+				</div>
+			</div>
+
+			<div class="review">
+				<div class="review__author-date">
+					<span class="review__author-name">Лилия Семёновна</span>
+					<span class="review__date">14 октября 2011</span>
+				</div>
+
+				<div class="review__text-wrapper">
+					<p class="review__text">Вероника, здравствуйте! Есть такой вопрос: Особый вид куниц жизненно стабилизирует кинетический момент?</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="addition-comment">
+		<form class="addition-comment__form">
+			<input type="text" id="name" class="addition-comment__input" placeholder="Имя">
+			<textarea name="comment" id="textarea" class="addition-comment__textarea" placeholder="Комментарий"></textarea>
+			<input type="submit" class="addition-comment__button" id="sendComment" value="Написать консультанту"></input>
+		<form>
+	</div>	
+
+	<script type="text/javascript">
+		$('#sendComment').click(function(event) {
+				event.preventDefault();
+				newComment();
+		});
+
+		$('#textarea').keydown(function(event) {
+			if (event.ctrlKey && event.keyCode == 13) {
+				newComment();
+			};
+		});
+	</script>
+</body>
+</html>
